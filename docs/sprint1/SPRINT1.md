@@ -6,8 +6,83 @@
 
 # Project overview
 Chosen product: Join & Do
+Join & Do is a collaboration app where people can create, join and complete tasks together. 
+This will be developed in a few parts, this first one focusing on requirements and modelling.
+
+
+# Stakeholders / Personas
+
+
+Our main users are:
+
+
+- **Students** – want to study together, prepare for exams, and stay motivated.  
+- **Fitness enthusiasts** – want accountability partners for workouts and healthy goals.  
+- **Exchange students / newcomers** – want to connect socially while doing everyday tasks.  
+- **Young professionals** – want to collaborate on small work or personal goals.  
+- **General everyday users** – want motivation and companionship for chores, hobbies, or lifestyle goals.  
+
+
+### Why they would use Join & Do
+Users are motivated to:
+- Find partners for tasks they don’t want to do alone.  
+- Connect with others
+- Organize and track tasks with groups.  
+
+
+Scope
+
+
+
+### In Scope
+- **Account management**: users can sign up, log in, update their details, or delete their account  
+- **Profiles**: each user has a profile where basic info and points/progress are stored  
+- **Tasks**: users can create, edit, and delete tasks, and break them into subtasks  
+- **Groups**: people can create groups, join existing ones, and invite or remove members  
+- **Collaboration**: users can leave comments on tasks or subtasks
+ 
+
+
+### Out of Scope
+- **Frontend/UI development** (this project focuses only on backend/business logic)  
+- **Third-party integrations** (payments, calendar sync, social media login)  
+- **Advanced features** like smart recommendations, AI-based scheduling
+
+
+
 
 # Scenarios
+
+
+ Create task
+**Person:** Klara (20), female
+**Motivation:** Doesn’t want to study alone, wants a partner for motivation.  
+
+
+**Story:**  
+Klara logs into *Join & Do* and opens the task overview. She clicks **Create task**, gives it the title **“Study Calculus ”**, sets the **category** to *School* She creates two **subtasks**: *Read section 3-4* and *Solve practice problems*.  
+She then presses create task and it appears on the site
+
+
+Join a group and collaborate
+**Persona:** Aron (25), fitness enthusiast
+**Motivation:** Wants to stay motivated with fitness goals.  
+
+
+**Story:**  
+Aron signs up for *Join & Do* and searches for public groups. He finds a group called **“Morning Fitness Crew”** and clicks **Join group**. Inside, he sees ongoing tasks like *“Go for a 20 min run”* and *“Do 30 push-ups”*.  
+He accepts the run task, marks it as **In progress**, and after attending it he marks it off as complete.
+
+
+**Persona:** Simone (21), exchange student  
+**Motivation:** Wants company and connection with new people
+
+
+**Story:**  
+Simone is having problems with connecting with people in her exchange studies, she feels alone. She logs into *Join & Do* and browses the list of **open tasks** created by other users. She finds one called **“Weekly meal prep”**, created by another student living nearby.  
+She clicks **Join task** and is automatically added to the creator’s group. Together, they agree on a time in and go together for grocery shopping and cooking. After completing the task, they both mark it as **Done**.
+
+
 
 # Domain-model
 

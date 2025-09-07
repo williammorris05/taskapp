@@ -30,7 +30,7 @@ Users are motivated to:
 - Organize and track tasks with groups.  
 
 
-Scope
+## Scope
 
 
 
@@ -49,6 +49,58 @@ Scope
 - **Advanced features** like smart recommendations, AI-based scheduling
 
 
+## Functional Requirements
+
+### Accounts
+- (A) Log in  
+- (A) Register  
+- (A) Edit/Delete account  
+- (B) Profiles  
+
+### Task Management
+- View all tasks  
+- (A) Create task  
+- (A) Join a task  
+- (A) Edit task  
+- (A) Remove task  
+- (B) Set priority of a task  
+- (B) Categorize tasks  
+- (B) Subtasks  
+
+### Collaboration
+- (A) Create groups  
+- (A) Invite users to a group  
+- (A) Remove users from a group  
+- (A) Join a group  
+
+### Gamification
+- (B) Earn points for completing tasks  
+
+### Communication
+- (B) Comment system for tasks and subtasks  
+- (B) Notifications and reminders  
+
+## User stories
+- As a user I want to **log in**, so that I can find someone to do tasks with.  
+- As a user I want to **register**, so I can use the software from my account.  
+- As a user I want to **edit my account**, so that I can update it in case my information changes.  
+- As a user I want to **view all tasks**, so I can browse tasks.  
+- As a user I want to **create a task**, so that I can find someone to do it with me.  
+- As a user I want to **edit a task**, so if something changes I can update the task.  
+- As a user I want to **remove tasks**, so if I don’t want to do it anymore it is deleted.  
+- As a user I want to **create groups with people**, so that I can collaborate with them.  
+- As a user I want to **invite other users to the group**, so that I can collaborate with them.  
+- As a user I want to **remove another user from the group**, so they are not in the group.  
+- As a user I want to **join another group**, so I can do tasks with said group.  
+- As a user I want to **see an overview of finished tasks**, so that I can keep track of my past tasks.  
+- As a user I want to **collect points when finishing a task**, so I feel a sense of accomplishment.  
+- As a user I want to **message other users**, so we can communicate.  
+- As a user I want to **comment on tasks/subtasks**, so I can add clarification.  
+- As a user I want to **receive notifications**, so I can have reminders about tasks.  
+- As a user I want to **categorize available tasks**, so I can find a task within my desired category.  
+- As a user I want to **see subtasks**, so I can see everything included in the task.  
+- As a user I want to **see other profiles**, so I can learn more about my task buddies.  
+-As a user I want to **join an existing task**, so I can do it with another person
 
 
 # Scenarios

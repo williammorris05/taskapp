@@ -8,20 +8,22 @@
 ---
 # Project overview
 
-**Chosen product:** Join & Do
-Join & Do is a collaboration app where people can create, join and complete tasks together.
-This will be developed in a few parts, this first one focusing on requirements and modelling.
+**Chosen product:** Join & Do <br>
+***Join & Do*** is a collaboration app that enables people to create tasks and projects, join others, and work together to complete them
+with gamification elements to keep things engaging.
+The development will be divided into several phases, with the first phase **Sprint 1** focusing on eliciting requirements and creating
+core models for the development of the software.
 
 ---
-## Stakeholders / Personas
+## Stakeholders
 
-### Our main users are:
+### Primary stakeholders:
 
-- **Students** – want to study together, prepare for exams, and stay motivated.
-- **Fitness enthusiasts** – want accountability partners for workouts and healthy goals.
-- **Exchange students / newcomers** – want to connect socially while doing everyday tasks.
-- **Young professionals** – want to collaborate on small work or personal goals.
-- **General everyday users** – want motivation and companionship for chores, hobbies, or lifestyle goals.
+- **Students** – who want to study with others and get ready for exams together.
+- **Fitness enthusiasts** – seeking partners to stay consistent with workouts and lifestyle goals.
+- **Exchange students / newcomers** –  who want to connect socially while doing everyday tasks.
+- **Young professionals** – who want to collaborate on small work or personal goals.
+- **General everyday users** – who want motivation and companionship for chores, hobbies, or lifestyle goals.
 
 ### Why they would use Join & Do
 
@@ -68,7 +70,7 @@ A | Join a project
 A | Invite a group to a project
 A | Assign a task to a project
 A | Close or remove a task
-B | Profiles
+A | Task and project overview
 B | Set task priority
 B | Categorize a task
 B | Point acquisition
@@ -80,7 +82,7 @@ B | Comments on tasks
 
 **Person:** Klara (20), female <br>
 **Motivation:** Doesn’t want to study alone, wants a partner for motivation. <br>
-**Story:** Klara logs into *Join & Do* and opens the task overview. She clicks *Create task*, gives it the title *“Study Calculus ”*, sets the *category* to *School* She creates two *subtasks*: *Read section 3-4* and *Solve practice problems*. She then presses create task and it appears on the site Join a group and collaborate
+**Story:** Klara logs into *Join & Do* and opens the task and project overview. She clicks *Create project*, gives it the title *“Study Calculus ”*, sets the *category* to *School* She creates two *tasks*: *Read section 3-4* and *Solve practice problems*. She then presses create task and it appears on the site Join a group and collaborate
 
 **Persona:** Aron (25), fitness enthusiast <br>
 **Motivation:** Wants to stay motivated with fitness goals. <br>
@@ -88,7 +90,7 @@ B | Comments on tasks
 
 **Persona:** Simone (21), exchange student <br>
 **Motivation:** Wants company and connection with new people <br>
-**Story:** Simone is having problems with connecting with people in her exchange studies, she feels alone. She logs into *Join & Do* and browses the list of *open tasks* created by other users. She finds one called *“Weekly meal prep”*, created by another student living nearby. She clicks *Join task* and is automatically added to the creator’s group. Together, they agree on a time in and go together for grocery shopping and cooking. After completing the task, they both mark it as *Done*.
+**Story:** Simone is having problems with connecting with people in her exchange studies, she feels alone. She logs into *Join & Do* and browses the list of *open projects* created by other users. She finds one called *“Weekly meal prep”*, created by another student living nearby. She clicks *Join project* and is automatically added to the creator’s group. Together, they agree on a time in and go together for grocery shopping and cooking. After completing the task, they both mark it as *Done*.
 
 ---
 <br>

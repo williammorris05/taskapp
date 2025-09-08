@@ -91,5 +91,5 @@ B | Comments on tasks
 **Story:** Simone is having problems with connecting with people in her exchange studies, she feels alone. She logs into *Join & Do* and browses the list of *open tasks* created by other users. She finds one called *“Weekly meal prep”*, created by another student living nearby. She clicks *Join task* and is automatically added to the creator’s group. Together, they agree on a time in and go together for grocery shopping and cooking. After completing the task, they both mark it as *Done*.
 
 ---
-## Domain Diagram
-![Domain diagram image](https://github.com/GiblerGoobler/hugb-group-18-project/blob/main/docs/sprint1/Sprint1_DomainDiagram.png?raw=true)
+<br>
+![Domain diagram image](https://gitlab.com/GiblerGoobler/hugb-group-18-project/-/raw/main/docs/sprint1/Sprint1_DomainDiagram.png)

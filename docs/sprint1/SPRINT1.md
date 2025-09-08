@@ -51,6 +51,21 @@ Users are motivated to:
 - **Advanced features** like smart recommendations, AI-based scheduling
 
 ---
+## Methods Used for Elicitation
+
+To define the functionality of *Join & Do*, we used the following elicitation methods:
+
+- **Brainstorming sessions**: We met as a group to discuss what features we wanted and what users should be able to do and how the program should function
+- **Review of project documentation**:  We studied the course materials to understand the assignment and how we should work and what the expected outcome should be.
+- **User story writing**: We transformed ideas into user stories in the format  
+  *“As a [persona], I want [feature], so that [benefit]”*.  
+- **Personas and scenarios**: We created fictional users (students, fitness enthusiasts, exchange students, etc.) and wrote scenarios to better imagine real usage situations.  
+- **Peer discussion with TA**: We clarified uncertainties and validated that our requirements made sense for the course project.  
+
+These methods led to the creation of our **functional requirements and user stories**, which we have registered as **GitLab issues under the “Open” label** to form our product backlog.
+
+
+---
 ## Functional Requirements
 
 | Priority | Requirement

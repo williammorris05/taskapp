@@ -64,25 +64,32 @@ These methods led to the creation of our **functional requirements and user stor
 | - | - |
 A | Log in
 A | Register 
-A | Edit account
-A | Edit profile
-A | Create a task
-A | Edit a task
-A | Close or remove a task
-A | Create a group
-A | Join a group
-A | Invite a user to a group
-A | Create a project
-A | Join a project
-A | Invite a group to a project
-A | Assign a task to a project
-A | Close or remove a task
-A | Task and project overview
-B | Set task priority
-B | Categorize a task
-B | Point acquisition
+A | Edit/Delete Account
+A | View All Tasks and Projects
+A | Create Project
+A | Edit Project
+A | Remove Project as User
+A | Invite to Project
+A | Remove From Project
+A | Overview of Finished Projects
+A | Receive Notifications
+A | View Tasks in Project
+A | Profiles
+A | Edit Profile
+A | Create a Project
+A | Join a Project
+A | Assign a Task to a Project
+A | Close or Remove a Task as User
+B | Categorise Projects
+B | Comment on Tasks
+B | Set Task Priority
+B | Point acquisition
 B | Achievements
-B | Comments on tasks
+B | Remove Project as Admin
+B | Close or Remove a Task as Admin
+B | Delete Account as Admin
+
+
 
 ---
 ### Scenarios

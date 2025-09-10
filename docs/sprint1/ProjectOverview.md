@@ -85,9 +85,9 @@ B | Comment on Tasks
 B | Set Task Priority
 B | Point acquisition
 B | Achievements
-B | Remove Project as Admin
-B | Close or Remove a Task as Admin
-B | Delete Account as Admin
+B | Remove Project as System Admin
+B | Close or Remove a Task as System Admin
+B | Delete Account as System Admin
 
 
 

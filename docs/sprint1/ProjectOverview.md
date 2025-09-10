@@ -66,7 +66,7 @@ A | Log in
 A | Register 
 A | Edit/Delete Account
 A | View All Tasks and Projects
-A | Create Project
+A | Create a Task
 A | Edit Project
 A | Remove Project as User
 A | Invite to Project

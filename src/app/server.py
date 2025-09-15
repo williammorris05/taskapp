@@ -41,7 +41,7 @@ def create_task():
     return '', 201
 
 
-@app.route('/project')
+@app.route('/project', methods=['POST'])
 def create_project():
     '''Put in a better docstring'''
     return '', 201

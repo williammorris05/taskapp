@@ -1,0 +1,25 @@
+# Made with chatgpt co-operation
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS
+.DS_Store
+
+# Coverage reports
+.coverage
+
+# Environment variables
+.env
+
+# Editor / IDE
+.vscode/
+.idea/
+

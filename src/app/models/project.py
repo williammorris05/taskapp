@@ -27,7 +27,7 @@ class Project:
 
     def __str__(self):
         """For testing purposes to see if class was made correctly"""
-        return str(print(
+        return str((
             self.projectTitle,
             self.projectID,
             self.category,
@@ -43,6 +43,9 @@ class Project:
         pass
 
 
+
 if __name__ == "__main__":
-    CleanRoom = Project("Clean my room", "cleaning", "John", "Open", "AAA")
+    CleanRoom = Project("Clean my room", "cleaning", "John", "Open", "")
     print(CleanRoom)
+
+#TODO: check due date

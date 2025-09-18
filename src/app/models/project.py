@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from typing import Optional
 
 class Project:
     # Temporary for sprint 2 testing. Resets to 0 when program is closed
@@ -11,7 +11,7 @@ class Project:
         category: str,
         projectAdmin: str,
         status: str,
-        dueDate: datetime
+        dueDate: Optional[datetime] = None
     ):
         """ Constructor for project """
         Project.IDCounter += 1
@@ -45,7 +45,5 @@ class Project:
 
 
 if __name__ == "__main__":
-    CleanRoom = Project("Clean my room", "cleaning", "John", "Open", "")
+    CleanRoom = Project("Clean my room", "cleaning", "John", "Open")
     print(CleanRoom)
-
-#TODO: check due date

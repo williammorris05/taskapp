@@ -4,6 +4,7 @@ from src.app.models.project import Project
 # How to run the tests
 # python3 -m unittest src.app.test.project.<function_name>
 
+EXISTING_USERS = ["John", "Tester"]
 
 class TestProject(unittest.TestCase):
     """Failiure test
@@ -29,6 +30,23 @@ class TestProject(unittest.TestCase):
                 dueDate=None
             )
         self.assertEqual(p.projectTitle, "Clean room")
+
+    def user_exists(self, username):
+        return username in EXISTING_USERS
+
+    """make sure a user exists before project is created"""
+    def test_user_must_exist_before_project(self):
+        user = "John"
+        if not self.user_exists(user):
+            self.fail(f"User '{user}' does not exist")
+
+        p = Project(
+            projectTitle="Clean room",
+            category="cleaning",
+            projectAdmin=user,
+            status="Open"
+        )
+        self.assertEqual(p.projectAdmin, "John")
 
 
 if __name__ == "__main__":

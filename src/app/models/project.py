@@ -39,10 +39,26 @@ class Project:
             self.dueDate
             ))
 
-    def inviteToProject():
-        pass
+    def inviteToProject(self, username: str, usersList: list):
+
+        """check if username exists"""
+        if username not in usersList:
+            return ("User does not exist")
+
+        """check if username is already a member"""
+        if username in self.members:
+            return ("User is already in the project")
+
+        """select project?"""
+
+        """add user to the project"""
+        self.members.append(username)
+        return {"success! Members": self.members}
 
 
 if __name__ == "__main__":
     CleanRoom = Project("Clean my room", "cleaning", "John", "Open", "AAA")
     print(CleanRoom)
+
+    EXISTING_USERS = ["Maria", "Hannah", "Bob", "John"]
+    print(CleanRoom.inviteToProject("Bob", EXISTING_USERS))

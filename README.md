@@ -1,10 +1,72 @@
-# Hugb2025Template
+# How to Run and Use the Application
 
-This is a template project that contains the structure for the project work in T-303-HUGB Software Engineering, Fall 2025.
+## 🚀 Run the Flask App
 
-Please make sure to read the [Code of Conduct](https://gitlab.com/grischal/hugb2025template/-/blob/main/code-of-conduct.md).
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Folder Structure
-The ```docs``` folder will contain all your documentation throughout the project. For sprint-specific documents, create folders for each sprint. Documents that you might maintain throughout the project can be placed directly in the docs folder.
+2. Run the server:
+   ```bash
+   flask --app src/app/server run
+   ```
+   The app will start at:  
+   👉 http://127.0.0.1:5000  
 
-The ```src``` folder will contain all source code that you write throughout the project, starting from Sprint 2 onwards.
+---
+
+## 📬 Demo Requests in Postman
+
+### 1. Create a Project
+**POST** `/project`  
+```json
+{
+  "projectTitle": "Clean Room",
+  "category": "cleaning",
+  "projectAdmin": "John"
+}
+```
+👉 Creates a new project with the given name and description.  
+
+---
+
+### 2. Create a Task
+**POST** `/task`  
+```json
+{
+  "title": "Finish sprint",
+  "description": "Implement create_task endpoint",
+  "priority": "High",
+  "projectParent": "p1",
+  "deadline": "2025-10-01"
+}
+```
+👉 Adds a new task to the specified project.  
+
+---
+
+### 3. Invite a User
+**POST** `/invite`  
+```json
+{
+  "username": "Tester",
+  "projectId": "p1"
+}
+```
+👉 Sends an invite to a user for the given project.  
+
+---
+
+## 🧪 Quick cURL Examples
+
+```bash
+# Create a project
+curl -X POST http://127.0.0.1:5000/project   -H "Content-Type: application/json"   -d '{"name":"My First Project","description":"Demo project from Postman"}'
+
+# Create a task
+curl -X POST http://127.0.0.1:5000/task   -H "Content-Type: application/json"   -d '{"title":"Finish sprint","description":"Implement create_task endpoint","priority":"High","projectParent":"p1","deadline":"2025-10-01"}'
+
+# Invite a user
+curl -X POST http://127.0.0.1:5000/invite   -H "Content-Type: application/json"   -d '{"username":"Tester","projectId":"p1"}'
+```

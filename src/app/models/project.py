@@ -38,10 +38,9 @@ class Project:
             self.tasksList,
             self.createdAt,
             self.dueDate
-            ))
+        ))
 
     def inviteToProject(self, username: str, usersList: list):
-
         """check if username exists"""
         if username not in usersList:
             return ("User does not exist")

@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
+
 class Project:
     # Temporary for sprint 2 testing. Resets to 0 when program is closed
     IDCounter = 0
@@ -49,12 +50,9 @@ class Project:
         if username in self.members:
             return ("User is already in the project")
 
-        """select project?"""
-
         """add user to the project"""
         self.members.append(username)
         return {"success! Members": self.members}
-
 
 
 if __name__ == "__main__":

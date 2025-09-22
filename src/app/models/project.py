@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from typing import Optional
 
 class Project:
     # Temporary for sprint 2 testing. Resets to 0 when program is closed
@@ -11,7 +11,7 @@ class Project:
         category: str,
         projectAdmin: str,
         status: str,
-        dueDate: datetime
+        dueDate: Optional[datetime] = None
     ):
         """ Constructor for project """
         Project.IDCounter += 1
@@ -27,7 +27,7 @@ class Project:
 
     def __str__(self):
         """For testing purposes to see if class was made correctly"""
-        return str(print(
+        return str((
             self.projectTitle,
             self.projectID,
             self.category,
@@ -43,6 +43,7 @@ class Project:
         pass
 
 
+
 if __name__ == "__main__":
-    CleanRoom = Project("Clean my room", "cleaning", "John", "Open", "AAA")
+    CleanRoom = Project("Clean my room", "cleaning", "John", "Open")
     print(CleanRoom)

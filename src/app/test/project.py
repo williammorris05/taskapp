@@ -2,14 +2,16 @@ import unittest
 from src.app.models.project import Project
 
 # How to run the tests
-# python3 -m unittest src.app.test.project.<function_name>
+# individual tests python3 -m unittest src.app.test.project.TestProject.<function name>
+# all tests python3 -m unittest src.app.test.project
 
 EXISTING_USERS = ["John", "Tester"]
 
+
 class TestProject(unittest.TestCase):
     """Failiure test
-    This tests if a project with no title fails. If a project is created 
-    without a title, python raises type error and the test passes 
+    This tests if a project with no title fails. If a project is created
+    without a title, python raises type error and the test passes
     (it failed to create the project)"""
     def test_title_required(self):
         with self.assertRaises(TypeError):

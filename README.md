@@ -1,44 +1,3 @@
-Group 18 — Sprint 2 (Minimal API + Tests)
-
-Goal: clean, simple, demoable endpoints with tests and coverage.
-Scope: no database, dummy/hardcoded IDs, minimal validation.
-Note: Per Sprint 2 instructions, we exclude server.py from coverage.
-
-----------------------------------------------------------------------
-What’s implemented
-----------------------------------------------------------------------
-- POST /task — create task (201)
-- POST /project — create project (dummy, 201)
-- POST /invite — invite user to project (dummy, 200)
-- Unit + route tests with coverage (≥ 50%)
-- Clear separation: models → interface → server
-
-----------------------------------------------------------------------
-Requirements
-----------------------------------------------------------------------
-See requirements.txt:
-Flask==3.0.3
-pytest==8.4.2
-pytest-cov==7.0.0
-
-----------------------------------------------------------------------
-Project structure
-----------------------------------------------------------------------
-src/
-  app/
-    __init__.py
-    server.py            # Flask routes (/task, /project, /invite)
-    interface.py         # Interface layer (create_task)
-    models/
-      __init__.py
-      task.py            # Task dataclass (dummy defaults)
-      project.py         # Project stub dataclass
-      user.py            # User stub dataclass
-tests/
-  ...                    # pytest tests for logic + routes
-pytest.ini               # pythonpath=src + coverage flags
-requirements.txt
-README.md
 
 ----------------------------------------------------------------------
 Setup & run
@@ -65,6 +24,29 @@ You have now set up the virtual environment.
 
 -----------------------
 
+## Initial setup of virtual environment — macOS
+
+- Open the root of the project in Finder (default called hugb-group-18-project)
+- Right click the background of the folder, which opens a drop-down menu.
+- Select "New Terminal at Folder" in the dropdown menu.
+  (If you don’t see this option, open the Terminal app manually and navigate to the project folder with: cd path/to/hugb-group-18-project)
+
+- This opens a terminal window. Copy/paste the command below, press enter to create the virtual environment:
+
+        python3 -m venv venv
+
+- Then copy/paste this command to activate the environment:
+
+        source venv/bin/activate
+
+- Then copy/paste this command to install dependencies:
+
+        pip install -r requirements.txt
+
+You have now set up the virtual environment.
+
+-----------------------
+
 # How to run the server on Windows
 If you have never created the virtual environment described above, do that first
 
@@ -82,8 +64,6 @@ This opens Windows powershell.
 		 flask --app 'src\app\server' run
      
 The server is now running on the URL http://127.0.0.1:5000
-
-
 
 1) Create and activate a virtualenv
 
@@ -128,6 +108,27 @@ Tip: env vars apply to the current terminal session. If you open a new terminal,
 (If python-dotenv is installed, Flask will auto-load .env so plain `flask run` works.)
 
 Server starts at: http://127.0.0.1:5000/
+
+-----------------------
+
+# How to run the server on macOS
+If you have never created the virtual environment described above, do that first.
+
+- Open the root of the project in Finder (Folder called hugb-group-18-project)
+- Right click the background, which opens a drop-down menu.
+- Select "New Terminal at Folder" in the dropdown menu.
+  (Or manually open the Terminal app and navigate with: cd path/to/hugb-group-18-project)
+
+- You should see (venv) in front of the command line if the virtual environment is active.
+  If the venv is not active, activate it with the command:
+
+        source venv/bin/activate
+
+- With the venv active, copy/paste this command into the terminal:
+
+        flask --app 'src/app/server.py' run
+
+The server is now running on the URL http://127.0.0.1:5000
 
 ----------------------------------------------------------------------
 Postman examples
@@ -190,48 +191,3 @@ Negative cases to demo
 - /project with {} → 400 {"error": "Project title cannot be empty"}
 - /invite with {"username": ""} → 400 {"error": "Username cannot be empty"}
 
-----------------------------------------------------------------------
-Pytest / coverage config
-----------------------------------------------------------------------
-
-pytest.ini (placed at repo root):
-[pytest]
-pythonpath = src
-testpaths = tests
-addopts = -q --cov=src/app --cov-report=term-missing --cov-fail-under=50
-
-[coverage:run]
-# Per Sprint 2: exclude the Flask wiring from coverage
-omit =
-    src/app/server.py
-
-(Optional) If you need to exclude additional stubs, add them under `omit`.
-
-----------------------------------------------------------------------
-Housekeeping
-----------------------------------------------------------------------
-
-.gitignore:
-venv/
-__pycache__/
-.pytest_cache/
-.DS_Store
-
-----------------------------------------------------------------------
-Design notes (Sprint 2 constraints)
-----------------------------------------------------------------------
-
-- No persistence (no DB). Endpoints return dummy objects.
-- IDs are hardcoded (t1, p1, u1) for demo consistency.
-- Minimal validation:
-  - /task: requires title (non-empty after strip)
-  - /project: requires projectTitle
-  - /invite: requires username
-- Layered structure matches course style: models → interface → server.
-- Tests cover both logic and HTTP routes; server.py excluded from coverage per sprint rules.
-
-----------------------------------------------------------------------
-Acknowledgements
-----------------------------------------------------------------------
-
-We used AI assistance to simplify and clarify the minimal implementation (as allowed by course policy). All team members understand the code paths we’re submitting and can explain each piece during review.

@@ -44,6 +44,47 @@ README.md
 Setup & run
 ----------------------------------------------------------------------
 
+## Inital setup of virtual enviroment Windows
+
+- Open the the root of the project in windows file explorer (default called hugb-group-18-project)
+- Right click the background in file explorer, which opens a drop-down menu.
+- Select "open in terminal" in the dropdown menu.
+- This opens Windows powershell, in there copy the command below, paste it in the terminal window and press enter
+
+		python -m venv venv
+
+- Then copy/paste this command
+
+		.\venv\Scripts\Activate.ps1
+
+- Then copy paste this command
+
+		pip install -r requirements.txt
+
+You have now set up the virtual environment.
+
+-----------------------
+
+# How to run the server on Windows
+If you have never created the virtual environment described above, do that first
+
+- Open the the root of the project in windows file explorer (Folder called hugb-group-18-project)
+- Right click the background, which opens a drop-down menu.
+- Select "open in terminal" in the dropdown menu.
+This opens Windows powershell.
+
+- You should see (venv) in front of the command line if it the virtual environment active
+ If the venv is not active, activate it with the command
+		
+		.\venv\Scripts\Activate.ps1
+- With the venv active, copy/paste this command into the terminal
+		
+		 flask --app 'src\app\server' run
+     
+The server is now running on the URL http://127.0.0.1:5000
+
+
+
 1) Create and activate a virtualenv
 
 macOS/Linux

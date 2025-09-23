@@ -13,3 +13,9 @@
 | 10-09-2025 | JSON chosen as database format | --- | --- | Team | --- | Sprint 2 |
 | 15-09-2025 | Decided on priority User Stories | Create Project, Create task, invite to project | Starting with these three | Team | --- | Sprint 2 |
 | 15-09-2025 | Assign group members to User Stories (Issues) | Create Project (Gísli & Eva), Create task(Korri & Sunna), invite to project(Tinna & Vigdís) | Two members per User Story | Team | --- | Sprint 2 |
+
+# Sprint 2 — Decision Protocol
+
+| Date (DD-MM-YYYY) | Decision | Context / Options Considered | Rationale | Owner(s) | Link |
+|---|---|---|---|---|---|
+| 20-09-2025 | Tinna leaves group | --- | Personal decision | --- | --- |

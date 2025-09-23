@@ -1,9 +1,9 @@
 
 
-Runtime (needed for the app to run) 
+#--- Runtime (needed for the app to run) ---
 Flask==3.1.2
 
-Optional runtime (Flask will install these anyway, but you can pin for reproducibility) 
+#--- Optional runtime (Flask will install these anyway, but you can pin for reproducibility) -- 
 Jinja2==3.1.6
 Werkzeug==3.1.3
 itsdangerous==2.2.0
@@ -12,7 +12,7 @@ click==8.2.1
 colorama==0.4.6
 iniconfig==2.1.0
 
-Dev / Test dependencies (not needed in production) 
+#-- Dev / Test dependencies (not needed in production) ---
 pytest==8.4.2
 pytest-cov==7.0.0
 coverage==7.10.6

@@ -29,7 +29,7 @@ lint:
 test:
   stage: test
   script:
-    - coverage run -m pytest -q
+    - coverage run -m pytest tests -q
     - coverage report -m --fail-under=50
     - coverage xml -o coverage.xml
   artifacts:

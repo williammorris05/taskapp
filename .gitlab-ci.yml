@@ -7,7 +7,6 @@ variables:
   PYTHONDONTWRITEBYTECODE: "1"
   PYTHONUNBUFFERED: "1"
   PYTHONPATH: "$CI_PROJECT_DIR"
-
 cache:
   key: "${CI_COMMIT_REF_SLUG}"
   paths:
@@ -31,7 +30,8 @@ lint:
 test:
   stage: test
   script:
-    - python -m pytest tests --maxfail=1 --disable-warnings -q --cov=. --cov-report=term-missing --cov-report=xml:coverage.xml --cov-fail-under=50
+    - python -m pytest
+    - ls -l coverage.xml
   artifacts:
     reports:
       coverage_report:

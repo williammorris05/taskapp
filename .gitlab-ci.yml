@@ -6,6 +6,7 @@ variables:
   PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
   PYTHONDONTWRITEBYTECODE: "1"
   PYTHONUNBUFFERED: "1"
+  PYTHONPATH: "$CI_PROJECT_DIR"
 
 cache:
   key: "${CI_COMMIT_REF_SLUG}"
@@ -15,6 +16,7 @@ cache:
 before_script:
   - python --version
   - pip install -r requirements.txt
+  - pip install pytest pytest-cov coverage
 
 # --- Lint (PEP8/Flake8) ---
 lint:
@@ -29,9 +31,10 @@ lint:
 test:
   stage: test
   script:
-    - coverage run -m pytest tests -q
-    - coverage report -m --fail-under=50
-    - coverage xml -o coverage.xml
+    # run tests in tests/ with coverage in one step (fails <50%)
+    - pytest tests --maxfail=1 --disable-warnings -q \
+        --cov=. --cov-report=term-missing \
+        --cov-report=xml:coverage.xml --cov-fail-under=50
   artifacts:
     reports:
       coverage_report:

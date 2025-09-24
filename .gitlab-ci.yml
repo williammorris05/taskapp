@@ -31,8 +31,7 @@ lint:
 test:
   stage: test
   script:
-    # run tests in tests/ with coverage in one step (fails <50%)
-    - pytest tests --maxfail=1 --disable-warnings -q \
+    - python -m pytest tests --maxfail=1 --disable-warnings -q \
         --cov=. --cov-report=term-missing \
         --cov-report=xml:coverage.xml --cov-fail-under=50
   artifacts:

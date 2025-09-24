@@ -16,18 +16,16 @@ before_script:
   - python --version
   - pip install -r requirements.txt
 
-# --- Lint (style) ---
+# --- Lint (PEP8/Flake8) ---
 lint:
   stage: lint
   script:
-    - ruff check . --include '*.py'
+    - flake8 .
   rules:
-    # Run for MRs and commits to main/dev
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "main"'
-    - if: '$CI_COMMIT_BRANCH == "dev"'
 
-# --- Tests + coverage ---
+# --- Tests + coverage (>=50%) ---
 test:
   stage: test
   script:
@@ -44,4 +42,3 @@ test:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH == "main"'
-    - if: '$CI_COMMIT_BRANCH == "dev"'

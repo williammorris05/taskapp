@@ -20,7 +20,7 @@ before_script:
 lint:
   stage: lint
   script:
-    - ruff check .
+    - ruff check . --include '*.py'
   rules:
     # Run for MRs and commits to main/dev
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'

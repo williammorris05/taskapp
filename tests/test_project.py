@@ -2,10 +2,7 @@ import unittest
 from app.models.project import Project
 
 
-# How to run the tests
-# individual tests
-# python3 -m unittest src.app.test.project.TestProject.<function name>
-# all tests python3 -m unittest src.app.test.project
+
 
 EXISTING_USERS = ["John", "Tester"]
 

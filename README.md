@@ -68,7 +68,7 @@ The server is now running on the URL http://127.0.0.1:5000
 1) Create and activate a virtualenv
 
 macOS/Linux
-  python -m venv venv
+  python3 -m venv venv
   source venv/bin/activate
 
 Windows (PowerShell)

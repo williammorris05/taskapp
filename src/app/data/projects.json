@@ -1,0 +1,25 @@
+{
+    "Projects": [
+    {
+      "projectId": "p1",
+      "category": "Homework",
+      "members": ["u1"],
+      "projectAdmin": ["u1"],
+      "status": "open", 
+      "tasksList": ["t1"],
+      "createdAt": "01.03.25",
+      "dueDate": "01.04.26"
+    },
+    {
+      "projectId": "p2",
+      "category": "Homework",
+      "members": ["u1"],
+      "projectAdmin": ["u1"],
+      "status": "open", 
+      "tasksList": ["t1"],
+      "createdAt": "01.03.25",
+      "dueDate": "01.04.26"
+    }
+
+    ]
+}

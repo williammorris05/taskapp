@@ -1,29 +1,40 @@
 """Interface layer between Flask routes and business logic."""
-from datetime import date
-from .models.task import Task as TaskModel  # alias helps flake8
+# from datetime import date
+from .models.task import TaskModel  # alias helps flake8
+from .util import load_json
+import os
 
 
 class Interface:
-    @staticmethod
-    def create_task(
-        title: str,
-        description: str = "",
-        priority: str = "Normal",
-        projectParent: str = "",
-        deadline: str = ""
-    ) -> TaskModel:
-        """Create a TaskModel with minimal validation and dummy values."""
-        if not title or not title.strip():
-            raise ValueError("Task title cannot be empty")
 
-        task = TaskModel(
-            taskId="t1",  # hardcoded for Sprint 2
-            title=title.strip(),
-            description=description.strip(),
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    tasks = load_json(os.path.join(base_path, "data", "tasks.json"))
+    projects = load_json(os.path.join(base_path, "data", "projects.json"))
+    users = load_json(os.path.join(base_path, "data", "users.json"))
+
+    @classmethod
+    def get_all_tasks(cls):
+        return cls.tasks
+
+    @classmethod
+    def get_all_projects(cls):
+        return cls.projects
+
+    @classmethod
+    def get_all_users(cls):
+        return cls.users
+
+    @classmethod
+    def create_task(cls, title, description="", priority="Normal",
+                    projectParent="", deadline=""):
+        task_id = f"t{len(cls.tasks) + 1}"
+        task_obj = TaskModel(
+            taskId=task_id,
+            title=title,
+            description=description,
             priority=priority,
             projectParent=projectParent,
-            status="open",
-            createdAt=date.today().isoformat(),
             deadline=deadline
         )
-        return task
+        cls.tasks.append(task_obj.to_dict())
+        return task_obj.to_dict()

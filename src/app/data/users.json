@@ -1,0 +1,20 @@
+{
+    "Users": [
+    {
+      "userId": "u1",
+      "userName": "John",
+      "password": "John123",
+      "projectsOwned": ["p1"],
+      "projectsMember": ["p2"],
+      "tasks": ["t1"]
+    },
+    {
+      "userId": "u2",
+      "userName": "Jane",
+      "password": "Jane123",
+      "projectsOwned": [],
+      "projectsMember": ["p1"],
+      "tasks": ["t2"]
+    }
+    ]
+}

@@ -3,6 +3,8 @@
 
 from flask import Flask, jsonify, request
 from .interface import Interface
+from flask import Response
+import json
 
 
 app = Flask(__name__)
@@ -63,7 +65,7 @@ def task_route():
             projectParent=data.get("projectParent", ""),
             deadline=data.get("deadline", "")
         )
-        return jsonify(task.__dict__), 201
+        return jsonify(task), 201
 
     except (TypeError, ValueError) as e:
         return jsonify({"error": str(e)}), 400
@@ -86,3 +88,34 @@ def project_route():
         "members": [data.get("projectAdmin", "u1")]
     }
     return jsonify(project), 201
+
+
+# ------------------------------------------------
+# GET routes to fetch all tasks, projects, users
+# ------------------------------------------------
+
+@app.route("/tasks", methods=["GET"])
+def get_tasks_route():
+    tasks = Interface.get_all_tasks()
+    return Response(
+        json.dumps(tasks, indent=2, ensure_ascii=False),
+        mimetype="application/json"
+    )
+
+
+@app.route("/projects", methods=["GET"])
+def get_projects_route():
+    projects = Interface.get_all_projects()
+    return Response(
+        json.dumps(projects, indent=2, ensure_ascii=False),
+        mimetype="application/json"
+    )
+
+
+@app.route("/users", methods=["GET"])
+def get_users_route():
+    users = Interface.get_all_users()
+    return Response(
+        json.dumps(users, indent=2, ensure_ascii=False),
+        mimetype="application/json"
+    )

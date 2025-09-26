@@ -126,6 +126,8 @@ If you have never created the virtual environment described above, do that first
 
 - With the venv active, copy/paste this command into the terminal:
 
+        flask --app 'src.app.server.py' run
+        or 
         flask --app 'src/app/server.py' run
 
 The server is now running on the URL http://127.0.0.1:5000

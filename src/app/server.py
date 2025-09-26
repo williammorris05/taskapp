@@ -24,7 +24,20 @@ def get_test():
 @app.route('/login', methods=['POST'])
 def login():
     '''Put in a better docstring'''
-    return '', 201
+    data = request.get_json(silent=True) or {}
+    username = data.get("username", "").strip()
+    password = data.get("password", "").strip()
+    if not username:
+        return jsonify({"error": "Username cannot be empty"}), 400
+    if not password:
+        return jsonify({"error": "Password cannot be empty"}), 400
+    try:
+        # TODO return token?
+        Interface.login(username, password)
+        return jsonify({'msg': "Successfully logged in"}), 200
+    # TODO, fill in correct errors
+    except Exception as e:
+        return jsonify({'error': str(e)}), 400
 
 
 @app.route('/register', methods=['POST'])

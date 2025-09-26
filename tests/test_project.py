@@ -2,9 +2,7 @@ import unittest
 from app.models.project import Project
 
 
-
-
-EXISTING_USERS = ["John", "Tester"]
+EXISTING_USERS = ["John", "Jane", "Doe", "Tester"]
 
 
 class TestProject(unittest.TestCase):

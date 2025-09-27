@@ -2,6 +2,7 @@
     "Projects": [
     {
       "projectId": "p1",
+      "projectTitle": "Grocery shopping",
       "category": "Homework",
       "members": ["u1"],
       "projectAdmin": ["u1"],
@@ -12,14 +13,38 @@
     },
     {
       "projectId": "p2",
-      "category": "Homework",
+      "projectTitle": "Pilates",
+      "category": "Workout",
       "members": ["u1"],
       "projectAdmin": ["u1"],
       "status": "open", 
       "tasksList": ["t1"],
       "createdAt": "01.03.25",
       "dueDate": "01.04.26"
+    },
+     {
+      "projectId": "p3",
+      "projectTitle": "Steikja kleinur",
+      "category": "Cooking",
+      "members": ["u1"],
+      "projectAdmin": ["u1"],
+      "status": "open", 
+      "tasksList": ["t1","t2","t3"],
+      "createdAt": "01.04.25",
+      "dueDate": "01.04.28"
+    },
+ {
+      "projectId": "p4",
+      "projectTitle": "Pilates",
+      "category": "Homework",
+      "members": ["u1","Siggi ísmaður"],
+      "projectAdmin": ["u1"],
+      "status": "open", 
+      "tasksList": ["t1"],
+      "createdAt": "31.03.25",
+      "dueDate": "01.06.26"
     }
+
 
     ]
 }

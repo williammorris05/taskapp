@@ -107,7 +107,7 @@ class Project:
         }
 # TODO: Check how we handle projectAdmin, is it user id?
 
-    @classmethod 
+    @classmethod
     def from_dict(cls, d):
         """Build Project from JSON record (unwrap admin list)."""
         admin = d.get("projectAdmin")

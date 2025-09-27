@@ -127,7 +127,7 @@ class Project:
 
 
 if __name__ == "__main__":
-    DB = "src/app/data/projects.json"  
+    DB = "src/app/data/projects.json"
 
     with open(DB) as f:
         data = json.load(f)
@@ -138,6 +138,5 @@ if __name__ == "__main__":
         print(pr)
 # CleanRoom = Project("Clean my room", "cleaning", "John", "Open")
 # print(CleanRoom)
-
 # EXISTING_USERS = ["Maria", "Hannah", "Bob", "John"]
 # print(CleanRoom.inviteToProject("Bob", EXISTING_USERS))

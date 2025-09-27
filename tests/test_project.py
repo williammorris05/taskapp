@@ -115,6 +115,27 @@ class TestProject(unittest.TestCase):
         self.assertEqual(result, "User does not exist")
         self.assertNotIn(user, p.members)
 
+    def test_edit_project(self):
+        p = Project("Test", "Cat", "Admin", "Open")
+        p.editProject(projectTitle="New", status="Closed")
+        self.assertEqual(p.projectTitle, "New")
+        self.assertEqual(p.status, "Closed")
+
+    def test_edit_project_leaves_other_fields_unchanged(self):
+        p = Project("Clean room",
+                    "cleaning",
+                    "John",
+                    "Open",
+                    dueDate="01.01.2026")
+        original_category = p.category
+        original_status = p.status
+
+        p.editProject(projectTitle="Changed Title")
+
+        self.assertEqual(p.projectTitle, "Changed Title")
+        self.assertEqual(p.category, original_category)
+        self.assertEqual(p.status, original_status)
+
 
 if __name__ == "__main__":
     unittest.main()

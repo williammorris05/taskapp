@@ -3,6 +3,20 @@
 Setup & run
 ----------------------------------------------------------------------
 
+## Dependency-free local demo
+
+For a limited in-memory demonstration without Flask, run from the repository root:
+
+```powershell
+$env:PYTHONPATH="src"
+python -m app.demo_server --port 5000
+```
+
+This binds to `127.0.0.1` only. It implements a subset of the Flask routes and
+does not provide production authentication, durable storage, or equivalent input
+validation. Do not expose it through a tunnel or use confidential data. The
+existing 13-test suite covers the core models, not HTTP acceptance of this demo.
+
 ## Inital setup of virtual enviroment Windows
 
 - Open the the root of the project in windows file explorer (default called hugb-group-18-project)

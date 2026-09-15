@@ -10,6 +10,12 @@ import json
 app = Flask(__name__)
 
 
+@app.get('/')
+def home():
+    from flask import render_template
+    return render_template('demo.html')
+
+
 @app.route('/post_test', methods=['POST'])
 def post_test():
     '''This is just to show how a POST request looks like; no functionality'''

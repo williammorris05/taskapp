@@ -17,6 +17,10 @@ does not provide production authentication, durable storage, or equivalent input
 validation. Do not expose it through a tunnel or use confidential data. The
 existing 13-test suite covers the core models, not HTTP acceptance of this demo.
 
+The Flask server also serves a small local page at `/` for creating an in-memory
+task and viewing tasks and projects. Start it with the documented Flask command;
+this page is a development demonstration, not durable or production-ready.
+
 ## Inital setup of virtual enviroment Windows
 
 - Open the the root of the project in windows file explorer (default called hugb-group-18-project)
